@@ -15,11 +15,13 @@ Use this list before pushing the site live.
 - [ ] Real project photos added to `/public/images/` (optional)
 - [ ] `featuredProject` in `app/page.tsx` updated if you have a featured project (optional)
 - [ ] BEE certificate: replace `public/bee-certificate.png` with current certificate if you have a newer one
+- [ ] **Images:** The eight sub-box PNGs in `public/images/` are web-optimized (small files; Next.js serves them in modern formats). To re-run optimization: `npm run optimize-images` (only overwrites when the result is smaller).
 
 ## Launching today
 
+- [ ] **Sub-box links:** Click each of the eight “Our solutions” cards on the home page and confirm: Engineering services & Roofing → `/services`; Training → `/training`; Light steel framing, Green warehouse, Hybrid modular, Warehouse in a box, Modular solution → `/modular-solutions`.
 - [ ] **Mobile:** Check the site on a phone; the top bar (Tel + email) stays hidden so the logo and nav have room. Tap through all main pages.
-- [ ] **Formspree:** Send a test message via the contact form and confirm it arrives at info@vesani.co.za.
+- [ ] **Formspree:** Send a test message via the contact form and confirm it arrives at info@vesani.co.za. Optionally set Formspree’s “Redirect” to `https://www.vesani.co.za/contact/success` so users see the dedicated success page after submitting.
 - [ ] **Share:** Send the link to your father, Precision LGS, Al-Ameen Caps., and other partners.
 
 ## After launch

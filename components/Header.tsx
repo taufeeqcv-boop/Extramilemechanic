@@ -47,29 +47,32 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Main nav: logo | centered links | CTA */}
+      {/* Main nav: logo block (with right line) | centered links | CTA */}
       <div className="mx-auto flex h-20 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
-        <Link href="/" className="flex shrink-0 items-center gap-3 hover:opacity-90">
-          {/* Logo wrapper: show emblem larger, clip bottom wording */}
-          <span className="flex h-20 w-20 shrink-0 items-start justify-center overflow-hidden">
-            <Image
-              src="/vesani-logo.png"
-              alt="Vesani Engineering"
-              width={80}
-              height={80}
-              priority
-              className="h-[150%] w-auto min-w-full object-contain object-top"
-            />
-          </span>
-          <span className="flex flex-col leading-tight">
-            <span className="text-xl font-bold uppercase tracking-tight text-brand sm:text-2xl">
-              Vesani
+        {/* Logo + wording block: emblem only (no bottom text), line on right like Trumod */}
+        <div className="flex shrink-0 border-r border-border pr-4 md:pr-6">
+          <Link href="/" className="flex items-center gap-3 hover:opacity-90">
+            {/* Emblem only: larger, bottom wording cropped out */}
+            <span className="flex h-20 w-24 shrink-0 items-start justify-center overflow-hidden">
+              <Image
+                src="/vesani-logo.png"
+                alt="Vesani Engineering"
+                width={96}
+                height={96}
+                priority
+                className="h-[200%] w-auto min-w-full object-contain object-top"
+              />
             </span>
-            <span className="text-xs font-normal uppercase tracking-wide text-text-muted sm:text-sm">
-              Engineering
+            <span className="flex flex-col justify-center leading-tight">
+              <span className="text-xl font-bold uppercase tracking-tight text-brand sm:text-2xl">
+                Vesani
+              </span>
+              <span className="text-xs font-normal uppercase tracking-wide text-text-muted sm:text-sm">
+                Engineering
+              </span>
             </span>
-          </span>
-        </Link>
+          </Link>
+        </div>
 
         {/* Desktop nav — centered */}
         <nav

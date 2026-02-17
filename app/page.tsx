@@ -30,6 +30,74 @@ const workImages = [
   },
 ];
 
+// Sub-categories (Trumod-style boxes at bottom) — images + Vesani-rephrased copy
+const subBoxes = [
+  {
+    src: "/images/engineering-services.png",
+    alt: "Engineers reviewing plans on site",
+    title: "Engineering services",
+    description:
+      "Specialised design engineering to international codes: TC designs, FEA, draughting and R&D for local and global clients.",
+    href: "/services",
+  },
+  {
+    src: "/images/light-steel-framing.png",
+    alt: "Light steel framing structure",
+    title: "Light steel framing",
+    description:
+      "TEC light steel framing: precision-engineered systems from our exclusive range as sole agent in Southern Africa—faster, stronger builds with minimal material.",
+    href: "/modular-solutions",
+  },
+  {
+    src: "/images/green-warehouse.png",
+    alt: "Industrial building with solar panels",
+    title: "Green warehouse",
+    description:
+      "Sustainable industrial buildings with integrated solar and energy-efficient design for a lower footprint and running costs.",
+    href: "/modular-solutions",
+  },
+  {
+    src: "/images/hybrid-modular-building-system.png",
+    alt: "Hybrid modular building system",
+    title: "Hybrid modular building system",
+    description:
+      "Flexible hybrid systems that combine modular speed with conventional options for tailored commercial and industrial solutions.",
+    href: "/modular-solutions",
+  },
+  {
+    src: "/images/training.png",
+    alt: "Professional training session",
+    title: "Training",
+    description:
+      "Skills development and certified training for contractors: system installation, steel frame erection and roof completion.",
+    href: "/training",
+  },
+  {
+    src: "/images/warehouse-in-a-box.png",
+    alt: "Modern warehouse interior",
+    title: "Warehouse in a box",
+    description:
+      "Turnkey warehouse and industrial space: rapid deployment, clear spans and natural light for efficient operations.",
+    href: "/modular-solutions",
+  },
+  {
+    src: "/images/roofing.png",
+    alt: "Industrial roofing and skylights",
+    title: "Roofing",
+    description:
+      "Lightweight roof structures, insulation and roof covering—tiling or sheeting—for durable, compliant builds.",
+    href: "/services",
+  },
+  {
+    src: "/images/modular-solution.png",
+    alt: "Modular building unit",
+    title: "Modular solution",
+    description:
+      "TEC modular building systems: factory-built units as sole agent in Southern Africa—wide range of finishes, fast delivery and structural benefits for multi-storey use.",
+    href: "/modular-solutions",
+  },
+];
+
 export default function Home() {
   return (
     <div>
@@ -194,6 +262,53 @@ export default function Home() {
               Contact us
             </Link>{" "}
             to discuss your requirements.
+          </p>
+        </div>
+      </section>
+
+      {/* Sub-categories — Trumod-style boxes */}
+      <section className="border-t border-border bg-white py-16">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <h2 className="text-center text-2xl font-semibold text-brand">
+            Our solutions
+          </h2>
+          <p className="mx-auto mt-2 max-w-xl text-center text-text-muted">
+            Design engineering, modular building and training—delivered to the same high standards.
+          </p>
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {subBoxes.map(({ src, alt, title, description, href }) => (
+              <Link
+                key={title}
+                href={href}
+                className="group overflow-hidden rounded-xl border border-border bg-white shadow-sm transition hover:shadow-md"
+              >
+                <div className="relative aspect-[4/3] bg-bg-subtle">
+                  <Image
+                    src={src}
+                    alt={alt}
+                    fill
+                    className="object-cover transition group-hover:scale-105"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  />
+                </div>
+                <div className="border-t border-border px-4 py-4">
+                  <h3 className="font-semibold text-brand transition-colors group-hover:text-brand-hover">
+                    {title}
+                  </h3>
+                  <p className="mt-1.5 text-sm leading-snug text-text-muted">
+                    {description}
+                  </p>
+                </div>
+              </Link>
+            ))}
+          </div>
+          <p className="mt-8 text-center">
+            <Link
+              href="/services"
+              className="text-sm font-medium text-brand underline hover:no-underline transition-colors duration-200 hover:text-brand-hover"
+            >
+              View all services
+            </Link>
           </p>
         </div>
       </section>

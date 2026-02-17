@@ -39,3 +39,18 @@ body {
 .btn-secondary {
   @apply rounded-md border border-[var(--color-border)] bg-white px-5 py-2.5 text-sm font-medium text-text-main transition-all duration-200 hover:bg-bg-subtle;
 }
+
+/* Loading screen — Trumod-style splash, polished */
+.loading-bar {
+  width: 40%;
+  animation: loading-bar 1.6s ease-in-out infinite;
+}
+
+@keyframes loading-bar {
+  0% {
+    transform: translateX(-120%);
+  }
+  100% {
+    transform: translateX(320%);
+  }
+}
