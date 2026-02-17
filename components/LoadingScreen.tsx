@@ -57,19 +57,19 @@ export default function LoadingScreen() {
       aria-busy={phase === "visible"}
       role="status"
     >
-      <div className="flex flex-col items-center gap-6 px-4">
-        {/* Logo emblem */}
-        <div className="relative h-24 w-24 overflow-hidden rounded-lg">
+      <div className="flex flex-col items-center gap-5 px-4">
+        {/* Emblem only — circular logo (orange & blue) */}
+        <div className="relative h-28 w-28 sm:h-32 sm:w-32">
           <Image
-            src="/vesani-logo.png"
+            src="/vesani-emblem.png"
             alt=""
-            width={96}
-            height={96}
+            width={128}
+            height={128}
             priority
-            className="h-[150%] w-auto min-w-full object-contain object-top"
+            className="h-full w-full object-contain"
           />
         </div>
-        {/* Brand block — same as header */}
+        {/* Manual wording */}
         <div className="flex flex-col items-center leading-tight">
           <span className="text-2xl font-bold uppercase tracking-tight text-brand sm:text-3xl">
             Vesani
@@ -79,7 +79,7 @@ export default function LoadingScreen() {
           </span>
         </div>
         {/* Loading bar */}
-        <div className="mt-2 w-48 overflow-hidden rounded-full bg-bg-subtle sm:w-56">
+        <div className="mt-1 w-44 overflow-hidden rounded-full bg-bg-subtle sm:w-52">
           <div className="h-1.5 rounded-full bg-brand loading-bar" />
         </div>
         <span className="sr-only">Loading</span>
