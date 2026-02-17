@@ -28,13 +28,9 @@ export default function ContactSuccessPage() {
             <Link href="/services" className="font-medium text-brand underline hover:no-underline hover:text-brand-hover">
               services
             </Link>
-            ,{" "}
+            {" "}or{" "}
             <Link href="/modular-solutions" className="font-medium text-brand underline hover:no-underline hover:text-brand-hover">
               modular solutions
-            </Link>
-            , or{" "}
-            <Link href="/training" className="font-medium text-brand underline hover:no-underline hover:text-brand-hover">
-              training
             </Link>
             .
           </p>

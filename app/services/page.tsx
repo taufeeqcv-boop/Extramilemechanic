@@ -5,7 +5,7 @@ import PageHeader from "@/components/PageHeader";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Vesani Engineering: design engineering services, modular building solutions, and training. TC designs, FEA, draughting, R&D; sole agent for TEC in Southern Africa.",
+    "Vesani Engineering: design engineering services and modular building solutions. TC designs, FEA, draughting, R&D; sole agent for TEC in Southern Africa.",
 };
 
 const designEngineeringServices = [
@@ -28,7 +28,7 @@ export default function ServicesPage() {
     <div>
       <PageHeader
         title="Our services"
-        subtitle="Design engineering, modular building solutions, and training—all under one roof."
+        subtitle="Design engineering and modular building solutions—all under one roof."
       />
 
       <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6">
@@ -108,48 +108,6 @@ export default function ServicesPage() {
                 className="font-medium text-brand underline hover:no-underline transition-colors duration-200 hover:text-brand-hover"
               >
                 Full details: Modular solutions
-              </Link>
-            </p>
-          </section>
-
-          {/* Training (Trumod) */}
-          <section className="rounded-2xl border border-border bg-white p-8 shadow-md sm:p-10 transition-shadow duration-300 hover:shadow-lg">
-            <h2 className="text-xl font-semibold text-brand">
-              Training
-            </h2>
-            <p className="mt-2 text-text-muted">
-              Our training campus equips building contractors and their staff
-              with the knowledge to install and maintain the systems we
-              manufacture and supply.
-            </p>
-            <ul className="mt-6 space-y-2 text-text-main">
-              <li className="flex items-start gap-2">
-                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brand" aria-hidden />
-                <span>Modular building system installation</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brand" aria-hidden />
-                <span>Steel frame and panel erection</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brand" aria-hidden />
-                <span>Lightweight roof structures: assembly and erection</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brand" aria-hidden />
-                <span>Full roof completion: insulation and roof covering (tiling or sheeting)</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brand" aria-hidden />
-                <span>Skills development for the industry</span>
-              </li>
-            </ul>
-            <p className="mt-6">
-              <Link
-                href="/training"
-                className="font-medium text-brand underline hover:no-underline transition-colors duration-200 hover:text-brand-hover"
-              >
-                Full details: Training
               </Link>
             </p>
           </section>

@@ -6,7 +6,7 @@ import PageHeader from "@/components/PageHeader";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Get in touch with Vesani Engineering for modular building solutions, design engineering and training. Enquiries welcome.",
+    "Get in touch with Vesani Engineering for modular building solutions and design engineering. Enquiries welcome.",
 };
 
 export default function ContactPage() {
@@ -14,7 +14,7 @@ export default function ContactPage() {
     <div>
       <PageHeader
         title="Contact us"
-        subtitle="Get in touch for enquiries about our modular building solutions, design engineering services or training."
+        subtitle="Get in touch for enquiries about our modular building solutions and design engineering services."
       />
       <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6">
         <div className="space-y-10">

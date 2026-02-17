@@ -6,7 +6,6 @@ const footerLinks = [
   { href: "/modular-solutions", label: "Modular Solutions" },
   { href: "/projects", label: "Projects" },
   { href: "/about", label: "About" },
-  { href: "/training", label: "Training" },
   { href: "/contact", label: "Contact" },
 ];
 

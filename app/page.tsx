@@ -65,14 +65,6 @@ const subBoxes = [
     href: "/modular-solutions",
   },
   {
-    src: "/images/training.png",
-    alt: "Professional training session",
-    title: "Training",
-    description:
-      "Skills development and certified training for contractors: system installation, steel frame erection and roof completion.",
-    href: "/training",
-  },
-  {
     src: "/images/warehouse-in-a-box.png",
     alt: "Modern warehouse interior",
     title: "Warehouse in a box",
@@ -273,7 +265,7 @@ export default function Home() {
             Our solutions
           </h2>
           <p className="mx-auto mt-3 max-w-xl text-center text-text-muted">
-            Design engineering, modular building and training—delivered to the same high standards.
+            Design engineering and modular building—delivered to the same high standards.
           </p>
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {subBoxes.map(({ src, alt, title, description, href }) => (

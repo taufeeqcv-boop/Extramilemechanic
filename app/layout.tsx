@@ -23,6 +23,9 @@ export const metadata: Metadata = {
   icons: {
     icon: "/vesani-logo.png",
   },
+  verification: process.env.GOOGLE_SITE_VERIFICATION
+    ? { google: process.env.GOOGLE_SITE_VERIFICATION }
+    : undefined,
   description:
     "Vesani Engineering provides quality design engineering and modular building solutions. Your partner for modern, efficient construction across South Africa and internationally.",
   openGraph: {
