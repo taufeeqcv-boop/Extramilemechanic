@@ -65,7 +65,7 @@ const jsonLd = {
       email: "info@vesani.co.za",
       address: {
         "@type": "PostalAddress",
-        streetAddress: "205 Wallace Street, Tygerdal",
+        streetAddress: "205 Wallace Street, Glenwood",
         addressLocality: "Cape Town",
         postalCode: "7460",
         addressRegion: "Western Cape",

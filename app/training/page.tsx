@@ -22,7 +22,7 @@ export default function TrainingPage() {
         subtitle="Adding value to the industry"
       />
       <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6">
-        <div className="rounded-2xl border border-border bg-white p-8 shadow-sm sm:p-10">
+        <div className="rounded-2xl border border-border bg-white p-8 shadow-md sm:p-10">
           <div className="mb-8 flex flex-wrap gap-2">
             {trainingLevels.map(({ level, label }) => (
               <span

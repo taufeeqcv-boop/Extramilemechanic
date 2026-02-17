@@ -34,7 +34,7 @@ export default function ServicesPage() {
       <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6">
         <div className="space-y-12">
           {/* Design engineering (Vesani) */}
-          <section className="rounded-2xl border border-border bg-white p-8 shadow-sm sm:p-10">
+          <section className="rounded-2xl border border-border bg-white p-8 shadow-md sm:p-10 transition-shadow duration-300 hover:shadow-lg">
             <h2 className="text-xl font-semibold text-brand">
               Design engineering
             </h2>
@@ -66,7 +66,7 @@ export default function ServicesPage() {
           </section>
 
           {/* Modular building (Trumod) */}
-          <section className="rounded-2xl border border-border bg-white p-8 shadow-sm sm:p-10">
+          <section className="rounded-2xl border border-border bg-white p-8 shadow-md sm:p-10 transition-shadow duration-300 hover:shadow-lg">
             <h2 className="text-xl font-semibold text-brand">
               Modular building solutions
             </h2>
@@ -113,7 +113,7 @@ export default function ServicesPage() {
           </section>
 
           {/* Training (Trumod) */}
-          <section className="rounded-2xl border border-border bg-white p-8 shadow-sm sm:p-10">
+          <section className="rounded-2xl border border-border bg-white p-8 shadow-md sm:p-10 transition-shadow duration-300 hover:shadow-lg">
             <h2 className="text-xl font-semibold text-brand">
               Training
             </h2>
@@ -155,7 +155,7 @@ export default function ServicesPage() {
           </section>
 
           {/* Products (Vesani / TEC) */}
-          <section className="rounded-2xl border border-border bg-white p-8 shadow-sm sm:p-10">
+          <section className="rounded-2xl border border-border bg-white p-8 shadow-md sm:p-10 transition-shadow duration-300 hover:shadow-lg">
             <h2 className="text-xl font-semibold text-brand">
               Products
             </h2>

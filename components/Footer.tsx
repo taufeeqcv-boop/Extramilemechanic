@@ -26,7 +26,7 @@ export default function Footer() {
               <Link
                 key={href}
                 href={href}
-                className="text-text-muted transition-colors hover:text-brand"
+                className="text-text-muted transition-colors duration-200 hover:text-brand focus-visible:outline-offset-2"
               >
                 {label}
               </Link>
@@ -36,12 +36,12 @@ export default function Footer() {
 
         <div className="mt-8 flex flex-col gap-2 border-t border-border pt-6 text-sm text-text-muted sm:flex-row sm:items-center sm:justify-between">
           <p>
-            <a href="tel:+27215911617" className="hover:text-brand">+27 21 591 1617</a>
+            <a href="tel:+27215911617" className="transition-colors duration-200 hover:text-brand focus-visible:outline-offset-2">+27 21 591 1617</a>
             {" · "}
-            <a href="mailto:info@vesani.co.za" className="hover:text-brand">info@vesani.co.za</a>
+            <a href="mailto:info@vesani.co.za" className="transition-colors duration-200 hover:text-brand focus-visible:outline-offset-2">info@vesani.co.za</a>
           </p>
           <p>
-            <Link href="/bee-certificate" className="hover:text-brand">B-BBEE Certificate</Link>
+            <Link href="/bee-certificate" className="transition-colors duration-200 hover:text-brand focus-visible:outline-offset-2">B-BBEE Certificate</Link>
             {" · "}
             © {new Date().getFullYear()} Vesani Engineering cc
           </p>

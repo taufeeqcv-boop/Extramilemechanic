@@ -4,6 +4,7 @@
  * - Compress PNG; overwrite only if result is smaller
  * Run: node scripts/optimize-subbox-images.js
  */
+/* eslint-disable @typescript-eslint/no-require-imports */
 
 const fs = require("fs");
 const path = require("path");

@@ -49,7 +49,7 @@ Make the header, footer, and overall UI/theme complete and consistent across all
 - **Multi-column layout (Trumod-style):**
   - **Column 1 – Company:** Logo, short tagline, “Sole agent for TEC in Southern Africa”, BEE certificate link.
   - **Column 2 – Quick links:** Same nav links as header (Home, Services, Modular Solutions, Projects, About, Training, Contact) in a vertical or 2-column list.
-  - **Column 3 – Contact:** Address (205 Wallace Street, Tygerdal…), Tel, Cell, Email so every page has key contact info without going to /contact.
+  - **Column 3 – Contact:** Address (205 Wallace Street, Glenwood…), Tel, Cell, Email so every page has key contact info without going to /contact.
 - **Bottom bar:** Single full-width bar with: “© 2025 Vesani Engineering cc · www.vesani.co.za” (and optional “Sole agent for TEC in Southern Africa” if not in column 1). Keep it minimal.
 - **Responsive:** Stack columns on mobile (e.g. Company, then Quick links, then Contact); same spacing and typography scale as the rest of the site.
 - **Theme:** Use design tokens for text and border colors so footer matches header and page backgrounds.

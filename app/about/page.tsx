@@ -17,7 +17,7 @@ export default function AboutPage() {
         subtitle="Quality design engineering and modular building solutions, globally."
       />
       <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6">
-        <div className="rounded-2xl border border-border bg-white p-8 shadow-sm sm:p-10">
+        <div className="rounded-2xl border border-border bg-white p-8 shadow-md sm:p-10">
           <div className="space-y-6 text-text-main">
             <p className="text-lg leading-relaxed">
               Vesani Engineering was formed in response to growing local and

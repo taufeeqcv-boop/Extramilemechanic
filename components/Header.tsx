@@ -41,7 +41,7 @@ export default function Header() {
             </a>
             <span className="flex items-center gap-1.5 text-white/90">
               <span aria-hidden>📍</span>
-              <span>205 Wallace St, Tygerdal, Cape Town</span>
+              <span>205 Wallace St, Glenwood, Cape Town</span>
             </span>
           </div>
         </div>
@@ -85,7 +85,7 @@ export default function Header() {
               <Link
                 key={href}
                 href={href}
-                className={`relative whitespace-nowrap text-sm font-semibold uppercase tracking-wide transition-colors duration-200 ${
+                className={`relative whitespace-nowrap text-sm font-semibold uppercase tracking-wide transition-colors duration-200 focus-visible:outline-offset-2 ${
                   isActive
                     ? "text-brand after:absolute after:bottom-[-5px] after:left-0 after:right-0 after:h-[2px] after:bg-brand"
                     : "text-text-main hover:text-brand"

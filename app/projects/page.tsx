@@ -16,7 +16,7 @@ export default function ProjectsPage() {
         subtitle="A selection of projects we have delivered using our modular building systems and design engineering services."
       />
       <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6">
-        <div className="rounded-2xl border border-border bg-white p-8 shadow-sm sm:p-10">
+        <div className="rounded-2xl border border-border bg-white p-8 shadow-md sm:p-10">
           <p className="leading-relaxed text-text-main">
             Case studies and project details will be added here. In the
             meantime, see our{" "}

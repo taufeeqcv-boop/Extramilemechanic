@@ -101,36 +101,36 @@ const subBoxes = [
 export default function Home() {
   return (
     <div>
-      {/* Hero with background image */}
-      <section className="relative min-h-[28rem] overflow-hidden bg-slate-900 sm:min-h-[32rem]">
+      {/* Hero with background image — strong hierarchy, brand overlay */}
+      <section className="relative min-h-[32rem] overflow-hidden bg-[#0f172a] sm:min-h-[36rem]">
         <Image
           src="/images/hero-construction.png"
           alt=""
           fill
           priority
-          className="object-cover opacity-50"
+          className="object-cover opacity-45"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-slate-900/70" aria-hidden />
-        <div className="relative mx-auto flex min-h-[28rem] max-w-4xl flex-col justify-center px-4 py-20 text-center text-white sm:min-h-[32rem] sm:px-6">
-          <h1 className="text-3xl font-bold tracking-tight drop-shadow-sm sm:text-4xl lg:text-5xl">
+        <div className="absolute inset-0 bg-gradient-to-b from-[#1e3a5f]/85 via-[#1e3a5f]/75 to-[#0f172a]/90" aria-hidden />
+        <div className="relative mx-auto flex min-h-[32rem] max-w-4xl flex-col justify-center px-4 py-24 text-center text-white sm:min-h-[36rem] sm:px-6">
+          <h1 className="text-4xl font-bold tracking-tight drop-shadow-md sm:text-5xl lg:text-6xl">
             The smarter alternative for your next build
           </h1>
-          <p className="mt-5 max-w-2xl mx-auto text-lg text-slate-200 drop-shadow-sm">
+          <p className="mt-6 max-w-2xl mx-auto text-lg leading-relaxed text-slate-200 drop-shadow-sm sm:text-xl">
             Customise your next project with the ultimate alternative to
             traditional construction. Modern modular building solutions,
             delivered faster and built to last.
           </p>
-          <div className="mt-10 flex flex-wrap justify-center gap-4">
+          <div className="mt-12 flex flex-wrap justify-center gap-4">
             <Link
               href="/services"
-              className="btn-primary inline-block px-8 py-3"
+              className="btn-primary inline-block px-8 py-3.5 text-base"
             >
               View solutions
             </Link>
             <Link
               href="/contact"
-              className="btn-secondary inline-block border-white/60 bg-white/10 px-8 py-3 text-white hover:bg-white/20"
+              className="btn-secondary inline-block border-white/50 bg-white/10 px-8 py-3.5 text-base text-white transition-all duration-300 hover:bg-white/20 hover:border-white/70 hover:-translate-y-0.5"
             >
               Get in touch
             </Link>
@@ -138,11 +138,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Value proposition */}
-      <section className="mx-auto max-w-4xl px-4 py-20 sm:px-6">
+      {/* Value proposition — left accent, premium card */}
+      <section className="mx-auto max-w-4xl px-4 py-24 sm:px-6">
         <h2 className="sr-only">Why choose modular building</h2>
-        <div className="rounded-2xl border border-border bg-bg-subtle px-6 py-10 shadow-sm sm:px-10">
-          <p className="text-sm font-medium text-brand">
+        <div className="rounded-2xl border border-border bg-bg-subtle px-6 py-10 shadow-sm sm:px-10 sm:py-12 border-l-4 border-l-brand">
+          <p className="text-sm font-semibold uppercase tracking-wide text-brand">
             Vesani is the sole agent for TEC in Southern Africa.
           </p>
           <p className="mt-6 text-lg leading-relaxed text-text-main">
@@ -174,34 +174,34 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Our work - image strip */}
-      <section className="border-y border-border bg-white py-16">
+      {/* Our work — image strip with hover wow */}
+      <section className="border-y border-border bg-white py-24">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <h2 className="text-center text-2xl font-semibold text-brand">
+          <h2 className="text-center text-3xl font-bold tracking-tight text-brand sm:text-4xl">
             Our work
           </h2>
-          <p className="mx-auto mt-2 max-w-xl text-center text-text-muted">
+          <p className="mx-auto mt-3 max-w-xl text-center text-text-muted">
             Engineering and modular solutions for industrial, commercial and
             infrastructure projects.
           </p>
-          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {workImages.map(({ src, alt, title, href }) => (
               <Link
                 key={href + title}
                 href={href}
-                className="group overflow-hidden rounded-xl border border-border shadow-sm transition hover:shadow-md"
+                className="group overflow-hidden rounded-2xl border border-border bg-white shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
               >
-                <div className="relative aspect-[4/3] bg-bg-subtle">
+                <div className="relative aspect-[4/3] bg-bg-subtle overflow-hidden">
                   <Image
                     src={src}
                     alt={alt}
                     fill
-                    className="object-cover transition group-hover:scale-105"
+                    className="object-cover transition-transform duration-500 ease-out group-hover:scale-110"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                 </div>
-                <div className="border-t border-border bg-white px-4 py-3">
-                  <span className="font-medium text-text-main transition-colors duration-200 group-hover:text-brand">
+                <div className="border-t border-border bg-white px-5 py-4">
+                  <span className="font-semibold text-text-main transition-colors duration-200 group-hover:text-brand">
                     {title}
                   </span>
                 </div>
@@ -220,9 +220,9 @@ export default function Home() {
       </section>
 
       {/* Featured project */}
-      <section className="bg-bg-subtle px-4 py-20 sm:px-6">
+      <section className="bg-bg-subtle px-4 py-24 sm:px-6">
         <div className="mx-auto max-w-4xl">
-          <h2 className="text-2xl font-semibold text-brand">
+          <h2 className="text-3xl font-bold tracking-tight text-brand sm:text-4xl">
             {featuredProject ? featuredProject.title : "Featured project"}
           </h2>
           {featuredProject?.image && (
@@ -266,33 +266,33 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Sub-categories — Trumod-style boxes */}
-      <section className="border-t border-border bg-white py-16">
+      {/* Sub-categories — solution cards with hover wow */}
+      <section className="border-t border-border bg-white py-24">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <h2 className="text-center text-2xl font-semibold text-brand">
+          <h2 className="text-center text-3xl font-bold tracking-tight text-brand sm:text-4xl">
             Our solutions
           </h2>
-          <p className="mx-auto mt-2 max-w-xl text-center text-text-muted">
+          <p className="mx-auto mt-3 max-w-xl text-center text-text-muted">
             Design engineering, modular building and training—delivered to the same high standards.
           </p>
-          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {subBoxes.map(({ src, alt, title, description, href }) => (
               <Link
                 key={title}
                 href={href}
-                className="group overflow-hidden rounded-xl border border-border bg-white shadow-sm transition hover:shadow-md"
+                className="group overflow-hidden rounded-2xl border border-border bg-white shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
               >
-                <div className="relative aspect-[4/3] bg-bg-subtle">
+                <div className="relative aspect-[4/3] bg-bg-subtle overflow-hidden">
                   <Image
                     src={src}
                     alt={alt}
                     fill
-                    className="object-cover transition group-hover:scale-105"
+                    className="object-cover transition-transform duration-500 ease-out group-hover:scale-110"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   />
                 </div>
-                <div className="border-t border-border px-4 py-4">
-                  <h3 className="font-semibold text-brand transition-colors group-hover:text-brand-hover">
+                <div className="border-t border-border px-5 py-4">
+                  <h3 className="font-semibold text-brand transition-colors duration-200 group-hover:text-brand-hover">
                     {title}
                   </h3>
                   <p className="mt-1.5 text-sm leading-snug text-text-muted">

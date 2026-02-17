@@ -10,9 +10,9 @@ export const metadata: Metadata = {
 export default function ContactSuccessPage() {
   return (
     <div>
-      <section className="border-b border-border bg-bg-subtle py-16">
+      <section className="border-b border-border bg-gradient-to-b from-bg-subtle to-white py-20">
         <div className="mx-auto max-w-2xl px-4 text-center sm:px-6">
-          <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-green-100 text-green-600" aria-hidden>
+          <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-green-100 text-green-600 shadow-inner" aria-hidden>
             <svg className="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
             </svg>

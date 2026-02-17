@@ -16,7 +16,7 @@ export default function BeeCertificatePage() {
         subtitle="Vesani Engineering Services CC is B-BBEE verified. Certificate issued by Emex Trust."
       />
       <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6">
-        <div className="rounded-2xl border border-border bg-white p-8 shadow-sm sm:p-10">
+        <div className="rounded-2xl border border-border bg-white p-8 shadow-md sm:p-10">
           <div className="overflow-hidden rounded-lg border border-border shadow-sm">
             <Image
               src="/bee-certificate.png"
