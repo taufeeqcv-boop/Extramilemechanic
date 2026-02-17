@@ -1,26 +1,45 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
+import PageHeader from "@/components/PageHeader";
 
 export const metadata: Metadata = {
-  title: "BEE Certificate | Vesani Engineering",
-  description: "Vesani Engineering BEE compliance certificate.",
+  title: "BEE Certificate",
+  description: "Vesani Engineering Services CC B-BBEE verification certificate.",
 };
 
 export default function BeeCertificatePage() {
   return (
-    <div className="mx-auto max-w-3xl px-4 py-12 sm:px-6">
-      <h1 className="text-2xl font-semibold text-slate-900">BEE Compliant</h1>
-      <p className="mt-4 text-slate-600">
-        Vesani Engineering is BEE compliant. For the current certificate,
-        please contact us or refer to the document provided by your account
-        manager.
-      </p>
-      <Link
-        href="/contact"
-        className="mt-6 inline-block font-medium text-slate-700 underline hover:text-slate-900"
-      >
-        Contact us
-      </Link>
+    <div>
+      <PageHeader
+        title="B-BBEE Certificate"
+        subtitle="Vesani Engineering Services CC is B-BBEE verified. Certificate issued by Emex Trust."
+      />
+      <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6">
+        <div className="rounded-2xl border border-border bg-white p-8 shadow-sm sm:p-10">
+          <div className="overflow-hidden rounded-lg border border-border shadow-sm">
+            <Image
+              src="/bee-certificate.png"
+              alt="Vesani Engineering Services CC B-BBEE verification certificate"
+              width={800}
+              height={1131}
+              className="w-full"
+              priority
+            />
+          </div>
+          <p className="mt-6 text-sm text-text-muted">
+            For current B-BBEE verification status or a copy of the latest
+            certificate, please{" "}
+            <Link
+              href="/contact"
+              className="font-medium text-brand underline transition-colors duration-200 hover:text-brand-hover"
+            >
+              contact us
+            </Link>
+            .
+          </p>
+        </div>
+      </div>
     </div>
   );
 }

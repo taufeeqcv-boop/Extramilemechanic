@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Vesani Engineering — www.vesani.co.za
 
-## Getting Started
+Next.js website for Vesani Engineering cc: modular building solutions, design engineering, and training.
 
-First, run the development server:
+## Run locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Build for production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+## Contact form (Formspree)
 
-To learn more about Next.js, take a look at the following resources:
+To receive contact form submissions by email:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Create a free form at [formspree.io](https://formspree.io) and set the notification email (e.g. info@vesani.co.za).
+2. Copy your form ID from the form endpoint (e.g. `https://formspree.io/f/abcde` → `abcde`).
+3. Create `.env.local` in the project root and add:
+   ```
+   NEXT_PUBLIC_FORMSPREE_ID=your_form_id
+   ```
+4. Restart the dev server or redeploy.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Without this variable, the contact page still shows the form and a note to use the listed contact details.
 
-## Deploy on Vercel
+## Featured project (home page)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+To show a real project on the home page, edit the `featuredProject` object in `app/page.tsx`. You can set `title`, `description`, and optionally `image` (path in `public/`) and `linkUrl`. Leave `featuredProject` as `null` to keep the current generic “Featured project” text.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Deploy (e.g. Vercel)
+
+1. Push the repo to GitHub (or connect your Git provider).
+2. Go to [vercel.com](https://vercel.com) → New Project → Import the repo.
+3. Add `NEXT_PUBLIC_FORMSPREE_ID` in Project Settings → Environment Variables.
+4. Deploy, then add your domain (www.vesani.co.za) in Project → Settings → Domains so the contact form and links use the live URL.
+
+**Launch recap:** Once the domain is connected, the site is live. The header top bar (Tel + email) is hidden on mobile for a cleaner experience. To activate the Training “Download prospectus” button, add your PDF at `public/documents/training-prospectus.pdf`. For a featured case study (e.g. Wealth Garden), set `featuredProject` in `app/page.tsx` or add a project page and link from the Projects section.
+
+## SEO
+
+- **Sitemap:** Generated at `/sitemap.xml` (base URL set to https://www.vesani.co.za).
+- **robots.txt:** Generated at `/robots.txt`, allows all crawlers and points to the sitemap.
+- **Favicon:** Uses the Vesani logo from `public/vesani-logo.png`.
+- **Open Graph:** Title, description, and logo image set for link previews (e.g. social sharing).
+- **Structured data:** JSON-LD for Organization and LocalBusiness (name, logo, address, phone, email) in the root layout for search engines.
+
+To use a different base URL (e.g. for staging), update `baseUrl` in `app/sitemap.ts` and `app/robots.ts`.
+
+## Project structure
+
+- `app/` — Pages (home, services, modular-solutions, projects, about, training, contact, bee-certificate), sitemap, robots.
+- `components/` — Header, Footer, PageHeader, ContactForm.
+- `public/` — Logo, BEE certificate, images; add `documents/training-prospectus.pdf` for the Training prospectus download.

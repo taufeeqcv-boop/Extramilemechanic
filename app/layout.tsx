@@ -15,9 +15,63 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Vesani Engineering | Modular Building Solutions",
+  title: {
+    default: "Vesani Engineering | Modular Building Solutions",
+    template: "%s | Vesani Engineering",
+  },
+  icons: {
+    icon: "/vesani-logo.png",
+  },
   description:
     "Vesani Engineering provides quality design engineering and modular building solutions. Your partner for modern, efficient construction across South Africa and internationally.",
+  openGraph: {
+    title: "Vesani Engineering | Modular Building Solutions",
+    description:
+      "Vesani Engineering provides quality design engineering and modular building solutions. www.vesani.co.za",
+    url: "https://www.vesani.co.za",
+    siteName: "Vesani Engineering",
+    images: [
+      {
+        url: "https://www.vesani.co.za/vesani-logo.png",
+        width: 256,
+        height: 256,
+        alt: "Vesani Engineering cc",
+      },
+    ],
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.vesani.co.za/#organization",
+      name: "Vesani Engineering cc",
+      url: "https://www.vesani.co.za",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://www.vesani.co.za/vesani-logo.png",
+      },
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://www.vesani.co.za/#localbusiness",
+      name: "Vesani Engineering cc",
+      image: "https://www.vesani.co.za/vesani-logo.png",
+      url: "https://www.vesani.co.za",
+      telephone: "+27215911617",
+      email: "info@vesani.co.za",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "205 Wallace Street, Tygerdal",
+        addressLocality: "Cape Town",
+        postalCode: "7460",
+        addressRegion: "Western Cape",
+        addressCountry: "ZA",
+      },
+    },
+  ],
 };
 
 export default function RootLayout({
@@ -30,8 +84,20 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} flex min-h-screen flex-col antialiased`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded focus:bg-brand focus:px-3 focus:py-2 focus:text-sm focus:text-white focus:outline-none"
+        >
+          Skip to main content
+        </a>
         <Header />
-        <main className="flex-1">{children}</main>
+        <main id="main-content" className="flex-1" tabIndex={-1}>
+          {children}
+        </main>
         <Footer />
       </body>
     </html>
