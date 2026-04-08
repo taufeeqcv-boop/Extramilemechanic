@@ -46,11 +46,11 @@ export default function Header() {
       </div>
 
       {/* Main nav: logo block (with right line) | centered links | CTA */}
-      <div className="mx-auto flex h-24 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
+      <div className="mx-auto flex h-24 max-w-6xl items-center justify-between gap-3 px-4 sm:gap-4 sm:px-6">
         {/* Logo + wording block: emblem only (no bottom text), line on right like Trumod */}
-        <div className="flex shrink-0 border-r border-border pr-4 md:pr-6">
+        <div className="flex shrink-0 pr-2 sm:pr-4 md:border-r md:border-border md:pr-6">
           <Link href="/" className="flex items-center hover:opacity-90">
-            <span className="flex h-16 w-56 shrink-0 items-center justify-center overflow-hidden sm:h-20 sm:w-72">
+            <span className="flex h-14 w-48 shrink-0 items-center justify-center overflow-hidden sm:h-20 sm:w-72">
               <Image
                 src="/images/extra-mile-logo.png"
                 alt="Extra Mile Mechanic"

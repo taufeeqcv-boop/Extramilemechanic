@@ -16,6 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.extramilemechanic.co.za"),
   title: {
     default: "Extra Mile Mechanic | Honest Mechanical Services",
     template: "%s | Extra Mile Mechanic",

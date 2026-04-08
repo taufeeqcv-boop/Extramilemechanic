@@ -42,7 +42,10 @@ export default function Home() {
     <div>
       <section className="relative min-h-[32rem] overflow-hidden bg-[#0b0b0b] sm:min-h-[36rem]">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(227,30,36,0.22),_transparent_50%)]" aria-hidden />
-        <div className="relative mx-auto flex min-h-[32rem] max-w-4xl flex-col justify-start px-4 pb-24 pt-14 text-center text-white sm:min-h-[36rem] sm:px-6 sm:pt-20">
+        <div className="relative mx-auto flex min-h-[32rem] max-w-4xl flex-col justify-start px-4 pb-24 pt-10 text-center text-white sm:min-h-[36rem] sm:px-6 sm:pt-16">
+          <p className="mx-auto rounded-full border border-white/20 bg-white/10 px-4 py-1 text-xs font-semibold uppercase tracking-widest text-zinc-200">
+            Cape Town&apos;s honest mechanic
+          </p>
           <h1 className="text-4xl font-bold tracking-tight drop-shadow-md sm:text-5xl lg:text-6xl">
             I&apos;m the mechanic on your mom&apos;s wish list
           </h1>
@@ -50,7 +53,7 @@ export default function Home() {
             The kind they say does not exist. A myth, a legend, fantasy or folklore.
             But right at the other end of this number is an honest mechanic with integrity.
           </p>
-          <div className="mt-12 flex flex-wrap justify-center gap-4">
+          <div className="mt-10 flex flex-wrap justify-center gap-4">
             <Link
               href="https://wa.me/27650034437"
               className="btn-primary inline-block px-8 py-3.5 text-base"
@@ -178,6 +181,17 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <div className="fixed inset-x-0 bottom-0 z-40 border-t border-white/10 bg-black/95 p-3 md:hidden">
+        <div className="mx-auto flex max-w-md items-center justify-center gap-3">
+          <Link href="tel:+27650034437" className="btn-primary flex-1 text-center">
+            Call now
+          </Link>
+          <Link href="https://wa.me/27650034437" className="btn-secondary flex-1 border-white/30 bg-white/10 text-center text-white hover:bg-white/20">
+            WhatsApp
+          </Link>
+        </div>
+      </div>
     </div>
   );
 }

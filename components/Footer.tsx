@@ -36,6 +36,8 @@ export default function Footer() {
           <p>
             <a href="tel:+27650034437" className="transition-colors duration-200 hover:text-brand focus-visible:outline-offset-2">+27 65 003 4437</a>
             {" · "}
+            <a href="https://wa.me/27650034437" className="transition-colors duration-200 hover:text-brand focus-visible:outline-offset-2">WhatsApp</a>
+            {" · "}
             <a href="https://www.facebook.com/julian.hartzenberg" className="transition-colors duration-200 hover:text-brand focus-visible:outline-offset-2">Facebook</a>
           </p>
           <p>
