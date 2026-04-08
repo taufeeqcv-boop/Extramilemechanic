@@ -1,6 +1,15 @@
 # Extra Mile Mechanic
 
-Next.js website for Extra Mile Mechanic.
+Official website for **Extra Mile Mechanic** (Cape Town), built with Next.js.
+
+## What this site includes
+
+- Bold, mobile-first landing page with direct call-to-action
+- Services, trust guarantee, customer proof, and contact pages
+- Mechanic intake form that can send:
+  - **Email enquiry** (via Formspree)
+  - **WhatsApp message** with prefilled job details
+- SEO essentials: metadata, sitemap, robots, and JSON-LD
 
 ## Run locally
 
@@ -32,6 +41,13 @@ To receive contact form submissions by email:
 
 Without this variable, the contact page still shows the form and a note to use the listed contact details.
 
+## WhatsApp booking flow
+
+Clients can submit the intake details directly to WhatsApp from the contact form.
+The current destination number is configured in:
+
+- `components/ContactForm.tsx` (`WHATSAPP_NUMBER`)
+
 ## Branding assets
 
 Place these files in `public/images/`:
@@ -54,6 +70,12 @@ Place these files in `public/images/`:
 - **Structured data:** JSON-LD for Organization and LocalBusiness in the root layout.
 
 To use a different live URL, update `baseUrl` in `app/sitemap.ts` and `app/robots.ts`.
+
+## Main business details currently used
+
+- Business: **Extra Mile Mechanic**
+- Contact number: **+27 65 003 4437**
+- Facebook: `https://www.facebook.com/julian.hartzenberg`
 
 ## Project structure
 
