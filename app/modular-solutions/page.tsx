@@ -3,42 +3,39 @@ import Link from "next/link";
 import PageHeader from "@/components/PageHeader";
 
 export const metadata: Metadata = {
-  title: "Modular Solutions",
+  title: "Why Choose Me",
   description:
-    "Vesani Engineering modular building systems: 82mm, 90mm and 110mm wall thicknesses, fire-retardant insulation, factory-manufactured steel framing. Single and double storey, interior and exterior.",
+    "Why choose Extra Mile Mechanic: transparent diagnostics, honest pricing, and free extra checks after every job.",
 };
 
 export default function ModularSolutionsPage() {
   return (
     <div>
       <PageHeader
-        title="Our modular building solutions"
-        subtitle="Efficient, compliant building systems for commercial and industrial applications."
+        title="Why choose Extra Mile Mechanic"
+        subtitle="A straight-up mechanic experience built on integrity and long-term customer care."
       />
       <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6">
         <div className="rounded-2xl border border-border bg-white p-8 shadow-md sm:p-10">
           <div className="space-y-6 text-text-main">
             <p className="text-lg leading-relaxed">
-              Our modular building system is an efficient alternative to
-              traditional building methods. It can be clad with a variety of
-              external finishes and is available in 82mm, 90mm or 110mm wall
-              thickness, insulated with fire-retardant polyurethane. The system
-              is lightweight, accurate and straightforward to assemble, and is
-              suitable for both interior drywall and exterior wall
-              applications, in single and double storey builds. Thermal and
-              energy performance align with current building regulations.
+              You should not have to wonder if your mechanic is telling the truth.
+              I explain faults in plain language, show what is urgent versus what can wait,
+              and keep recommendations realistic for your budget.
             </p>
             <p className="leading-relaxed">
-              Steel framing and modular wall panels are manufactured in our
-              factory to strict tolerances, ensuring consistent quality, high
-              accuracy and fewer errors on site. The composite nature of the
-              system makes it easy and efficient to transport and erect on site,
-              helping you keep programmes on track.
+              After each repair or service, I do extra checks at no additional charge
+              to pick up early warning signs. That is how breakdowns are prevented and
+              how long-term trust is built.
+            </p>
+            <p className="leading-relaxed">
+              If you want a mechanic who treats your car like it has to serve your family
+              for years, not just this month, you are in the right place.
             </p>
           </div>
           <div className="mt-10">
             <Link href="/contact" className="btn-primary inline-flex items-center">
-              Discuss your project
+              Book your vehicle
             </Link>
           </div>
         </div>

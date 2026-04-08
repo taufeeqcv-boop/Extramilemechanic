@@ -1,5 +1,5 @@
 /**
- * Optimize the eight sub-box PNGs in public/images/ for web:
+ * Optimize selected PNG images in public/images/ for web:
  * - Resize only if width > 1200px (keeps aspect ratio, no upscale)
  * - Compress PNG; overwrite only if result is smaller
  * Run: node scripts/optimize-subbox-images.js
@@ -13,14 +13,8 @@ const sharp = require("sharp");
 
 const PUBLIC_IMAGES = path.join(__dirname, "..", "public", "images");
 const FILES = [
-  "engineering-services.png",
-  "light-steel-framing.png",
-  "green-warehouse.png",
-  "hybrid-modular-building-system.png",
-  "training.png",
-  "warehouse-in-a-box.png",
-  "roofing.png",
-  "modular-solution.png",
+  "extra-mile-logo.png",
+  "extra-mile-business-card.png",
 ];
 
 const MAX_WIDTH = 1200;

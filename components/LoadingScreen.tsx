@@ -58,27 +58,24 @@ export default function LoadingScreen() {
       role="status"
     >
       <div className="flex flex-col items-center gap-5 px-4">
-        {/* Emblem only — circular logo (orange & blue) */}
-        <div className="relative h-28 w-28 sm:h-32 sm:w-32">
+        <div className="relative h-24 w-56 sm:h-28 sm:w-64">
           <Image
-            src="/vesani-emblem.png"
-            alt=""
-            width={128}
-            height={128}
+            src="/images/extra-mile-logo.png"
+            alt="Extra Mile Mechanic"
+            width={500}
+            height={200}
             priority
             className="h-full w-full object-contain"
           />
         </div>
-        {/* Manual wording */}
         <div className="flex flex-col items-center leading-tight">
           <span className="text-2xl font-bold uppercase tracking-tight text-brand sm:text-3xl">
-            Vesani
+            Extra Mile
           </span>
           <span className="text-sm font-normal uppercase tracking-wide text-text-muted">
-            Engineering
+            Mechanic
           </span>
         </div>
-        {/* Loading bar */}
         <div className="mt-1 w-44 overflow-hidden rounded-full bg-bg-subtle sm:w-52">
           <div className="h-1.5 rounded-full bg-brand loading-bar" />
         </div>

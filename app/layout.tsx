@@ -17,29 +17,29 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Vesani Engineering | Modular Building Solutions",
-    template: "%s | Vesani Engineering",
+    default: "Extra Mile Mechanic | Honest Mechanical Services",
+    template: "%s | Extra Mile Mechanic",
   },
   icons: {
-    icon: "/vesani-logo.png",
+    icon: "/images/extra-mile-logo.png",
   },
   verification: process.env.GOOGLE_SITE_VERIFICATION
     ? { google: process.env.GOOGLE_SITE_VERIFICATION }
     : undefined,
   description:
-    "Vesani Engineering provides quality design engineering and modular building solutions. Your partner for modern, efficient construction across South Africa and internationally.",
+    "Cape Town's honest mechanic. Reliable servicing, diagnostics and repairs with free extra checks after every job.",
   openGraph: {
-    title: "Vesani Engineering | Modular Building Solutions",
+    title: "Extra Mile Mechanic | Honest Mechanical Services",
     description:
-      "Vesani Engineering provides quality design engineering and modular building solutions. www.vesani.co.za",
-    url: "https://www.vesani.co.za",
-    siteName: "Vesani Engineering",
+      "Reliable mechanic services built on integrity, clear pricing and long-term customer relationships.",
+    url: "https://www.facebook.com/julian.hartzenberg",
+    siteName: "Extra Mile Mechanic",
     images: [
       {
-        url: "https://www.vesani.co.za/vesani-logo.png",
-        width: 256,
-        height: 256,
-        alt: "Vesani Engineering cc",
+        url: "/images/extra-mile-logo.png",
+        width: 500,
+        height: 200,
+        alt: "Extra Mile Mechanic",
       },
     ],
   },
@@ -50,27 +50,26 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "Organization",
-      "@id": "https://www.vesani.co.za/#organization",
-      name: "Vesani Engineering cc",
-      url: "https://www.vesani.co.za",
+      "@id": "https://www.facebook.com/julian.hartzenberg#organization",
+      name: "Extra Mile Mechanic",
+      url: "https://www.facebook.com/julian.hartzenberg",
       logo: {
         "@type": "ImageObject",
-        url: "https://www.vesani.co.za/vesani-logo.png",
+        url: "/images/extra-mile-logo.png",
       },
     },
     {
       "@type": "LocalBusiness",
-      "@id": "https://www.vesani.co.za/#localbusiness",
-      name: "Vesani Engineering cc",
-      image: "https://www.vesani.co.za/vesani-logo.png",
-      url: "https://www.vesani.co.za",
-      telephone: "+27215911617",
-      email: "info@vesani.co.za",
+      "@id": "https://www.facebook.com/julian.hartzenberg#localbusiness",
+      name: "Extra Mile Mechanic",
+      image: "/images/extra-mile-logo.png",
+      url: "https://www.facebook.com/julian.hartzenberg",
+      telephone: "+27650034437",
       address: {
         "@type": "PostalAddress",
-        streetAddress: "205 Wallace Street, Glenwood",
+        streetAddress: "Cape Town",
         addressLocality: "Cape Town",
-        postalCode: "7460",
+        postalCode: "8000",
         addressRegion: "Western Cape",
         addressCountry: "ZA",
       },

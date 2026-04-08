@@ -1,40 +1,37 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import PageHeader from "@/components/PageHeader";
 
 export const metadata: Metadata = {
-  title: "BEE Certificate",
-  description: "Vesani Engineering Services CC B-BBEE verification certificate.",
+  title: "Trust Guarantee",
+  description: "Extra Mile Mechanic trust and service commitment.",
 };
 
 export default function BeeCertificatePage() {
   return (
     <div>
       <PageHeader
-        title="B-BBEE Certificate"
-        subtitle="Vesani Engineering Services CC is B-BBEE verified. Certificate issued by Emex Trust."
+        title="Trust guarantee"
+        subtitle="What you can always expect when you bring your car to Extra Mile Mechanic."
       />
       <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6">
         <div className="rounded-2xl border border-border bg-white p-8 shadow-md sm:p-10">
-          <div className="overflow-hidden rounded-lg border border-border shadow-sm">
-            <Image
-              src="/bee-certificate.png"
-              alt="Vesani Engineering Services CC B-BBEE verification certificate"
-              width={800}
-              height={1131}
-              className="w-full"
-              priority
-            />
+          <div className="rounded-lg border border-border bg-bg-subtle p-6">
+            <ul className="space-y-2 text-text-main">
+              <li>Clear explanation before any paid work starts.</li>
+              <li>No hidden add-ons and no pressure tactics.</li>
+              <li>Only necessary repairs are recommended.</li>
+              <li>Free extra checks after every job.</li>
+              <li>Respect for your time, budget, and safety.</li>
+            </ul>
           </div>
           <p className="mt-6 text-sm text-text-muted">
-            For current B-BBEE verification status or a copy of the latest
-            certificate, please{" "}
+            If you want to chat before booking, please{" "}
             <Link
               href="/contact"
               className="font-medium text-brand underline transition-colors duration-200 hover:text-brand-hover"
             >
-              contact us
+              contact me
             </Link>
             .
           </p>

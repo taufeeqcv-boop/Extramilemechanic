@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Message sent",
   description:
-    "Thank you for contacting Vesani Engineering. We will respond as soon as possible.",
+    "Thank you for contacting Extra Mile Mechanic. We will respond as soon as possible.",
 };
 
 export default function ContactSuccessPage() {
@@ -21,16 +21,16 @@ export default function ContactSuccessPage() {
             Message sent
           </h1>
           <p className="mt-4 text-lg text-text-muted">
-            Thank you for getting in touch with Vesani Engineering. We have received your enquiry and will respond as soon as possible—usually within one or two working days.
+            Thank you for getting in touch with Extra Mile Mechanic. We have received your enquiry and will respond as soon as possible.
           </p>
           <p className="mt-2 text-sm text-text-muted">
             In the meantime, you can explore our{" "}
             <Link href="/services" className="font-medium text-brand underline hover:no-underline hover:text-brand-hover">
               services
             </Link>
-            {" "}or{" "}
-            <Link href="/modular-solutions" className="font-medium text-brand underline hover:no-underline hover:text-brand-hover">
-              modular solutions
+            {" "}or read{" "}
+            <Link href="/about" className="font-medium text-brand underline hover:no-underline hover:text-brand-hover">
+              about
             </Link>
             .
           </p>

@@ -7,11 +7,10 @@ import { useState } from "react";
 
 const navLinks = [
   { href: "/", label: "Home" },
-  { href: "/services", label: "Services" },
-  { href: "/modular-solutions", label: "Modular Solutions" },
-  { href: "/projects", label: "Projects" },
-  { href: "/about", label: "About" },
-  { href: "/contact", label: "Contact" },
+  { href: "/#services", label: "Services" },
+  { href: "/#why-us", label: "Why Us" },
+  { href: "/#proof", label: "Proof" },
+  { href: "/#contact", label: "Contact" },
 ];
 
 export default function Header() {
@@ -21,54 +20,45 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-white shadow-sm">
       {/* Top bar — desktop only */}
-      <div className="hidden border-b border-brand/20 bg-brand px-4 py-1.5 text-sm text-white md:block">
+      <div className="hidden border-b border-brand/20 bg-black px-4 py-1.5 text-sm text-white md:block">
         <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 sm:px-6">
           <div className="flex flex-wrap items-center gap-6">
             <a
-              href="tel:+27215911617"
+              href="tel:+27650034437"
               className="flex items-center gap-1.5 hover:opacity-90"
             >
               <span aria-hidden>📞</span>
-              <span>+27 21 591 1617</span>
+              <span>+27 65 003 4437</span>
             </a>
             <a
-              href="mailto:info@vesani.co.za"
+              href="https://wa.me/27650034437"
               className="flex items-center gap-1.5 hover:opacity-90"
             >
-              <span aria-hidden>✉</span>
-              <span>info@vesani.co.za</span>
+              <span aria-hidden>💬</span>
+              <span>WhatsApp available</span>
             </a>
             <span className="flex items-center gap-1.5 text-white/90">
               <span aria-hidden>📍</span>
-              <span>205 Wallace St, Glenwood, Cape Town</span>
+              <span>Cape Town and surrounds</span>
             </span>
           </div>
         </div>
       </div>
 
       {/* Main nav: logo block (with right line) | centered links | CTA */}
-      <div className="mx-auto flex h-20 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
+      <div className="mx-auto flex h-24 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
         {/* Logo + wording block: emblem only (no bottom text), line on right like Trumod */}
         <div className="flex shrink-0 border-r border-border pr-4 md:pr-6">
-          <Link href="/" className="flex items-center gap-3 hover:opacity-90">
-            {/* Emblem only: larger, bottom wording cropped out */}
-            <span className="flex h-20 w-24 shrink-0 items-start justify-center overflow-hidden">
+          <Link href="/" className="flex items-center hover:opacity-90">
+            <span className="flex h-16 w-56 shrink-0 items-center justify-center overflow-hidden sm:h-20 sm:w-72">
               <Image
-                src="/vesani-logo.png"
-                alt="Vesani Engineering"
-                width={96}
-                height={96}
+                src="/images/extra-mile-logo.png"
+                alt="Extra Mile Mechanic"
+                width={400}
+                height={160}
                 priority
-                className="h-[200%] w-auto min-w-full object-contain object-top"
+                className="h-[145%] w-[145%] max-w-none object-cover"
               />
-            </span>
-            <span className="flex flex-col justify-center leading-tight">
-              <span className="text-xl font-bold uppercase tracking-tight text-brand sm:text-2xl">
-                Vesani
-              </span>
-              <span className="text-xs font-normal uppercase tracking-wide text-text-muted sm:text-sm">
-                Engineering
-              </span>
             </span>
           </Link>
         </div>
@@ -99,10 +89,10 @@ export default function Header() {
         {/* Desktop CTA + mobile menu button */}
         <div className="flex items-center gap-3">
           <Link
-            href="/contact"
+            href="/#contact"
             className="btn-primary hidden whitespace-nowrap md:inline-block"
           >
-            Get in touch
+            Call now
           </Link>
           <button
             type="button"
@@ -135,11 +125,11 @@ export default function Header() {
               </Link>
             ))}
             <Link
-              href="/contact"
+              href="/#contact"
               onClick={() => setMobileOpen(false)}
               className="btn-primary mt-2 inline-block text-center"
             >
-              Get in touch
+              Call now
             </Link>
           </nav>
         </div>

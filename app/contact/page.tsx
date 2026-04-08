@@ -1,20 +1,21 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import ContactForm from "@/components/ContactForm";
 import PageHeader from "@/components/PageHeader";
 
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Get in touch with Vesani Engineering for modular building solutions and design engineering. Enquiries welcome.",
+    "Book your vehicle with Extra Mile Mechanic. Call, WhatsApp, or send a message.",
 };
 
 export default function ContactPage() {
   return (
     <div>
       <PageHeader
-        title="Contact us"
-        subtitle="Get in touch for enquiries about our modular building solutions and design engineering services."
+        title="Contact"
+        subtitle="Book your vehicle, ask a question, or send a quick WhatsApp."
       />
       <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6">
         <div className="space-y-10">
@@ -31,6 +32,15 @@ export default function ContactPage() {
             <h2 className="text-sm font-semibold uppercase tracking-wide text-text-muted">
               Or get in touch directly
             </h2>
+            <div className="mt-4 overflow-hidden rounded-xl border border-border bg-white p-3">
+              <Image
+                src="/images/extra-mile-business-card.png"
+                alt="Extra Mile Mechanic contact card"
+                width={1024}
+                height={683}
+                className="h-auto w-full rounded-lg object-cover"
+              />
+            </div>
             <div className="mt-4 rounded-xl border border-border bg-bg-subtle p-6">
               <ul className="space-y-4" role="list">
                 <li className="flex gap-4">
@@ -41,8 +51,8 @@ export default function ContactPage() {
                     </svg>
                   </span>
                   <div>
-                    <p className="text-xs font-medium uppercase tracking-wide text-text-muted">Address</p>
-                    <p className="mt-0.5 text-text-main">205 Wallace Street, Glenwood, 7460, Western Cape, South Africa</p>
+                    <p className="text-xs font-medium uppercase tracking-wide text-text-muted">Service area</p>
+                    <p className="mt-0.5 text-text-main">Cape Town and surrounding areas</p>
                   </div>
                 </li>
                 <li className="flex gap-4">
@@ -53,18 +63,7 @@ export default function ContactPage() {
                   </span>
                   <div>
                     <p className="text-xs font-medium uppercase tracking-wide text-text-muted">Tel</p>
-                    <a href="tel:+27215911617" className="mt-0.5 block font-medium text-brand transition-colors hover:text-brand-hover">+27 21 591 1617</a>
-                  </div>
-                </li>
-                <li className="flex gap-4">
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-white text-brand shadow-sm" aria-hidden>
-                    <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
-                    </svg>
-                  </span>
-                  <div>
-                    <p className="text-xs font-medium uppercase tracking-wide text-text-muted">Fax</p>
-                    <a href="tel:+2788215911617" className="mt-0.5 block font-medium text-brand transition-colors hover:text-brand-hover">+27 882 1591 1617</a>
+                    <a href="tel:+27650034437" className="mt-0.5 block font-medium text-brand transition-colors hover:text-brand-hover">+27 65 003 4437</a>
                   </div>
                 </li>
                 <li className="flex gap-4">
@@ -74,8 +73,8 @@ export default function ContactPage() {
                     </svg>
                   </span>
                   <div>
-                    <p className="text-xs font-medium uppercase tracking-wide text-text-muted">Cell</p>
-                    <a href="tel:+27828854250" className="mt-0.5 block font-medium text-brand transition-colors hover:text-brand-hover">+27 82 885 4250</a>
+                    <p className="text-xs font-medium uppercase tracking-wide text-text-muted">WhatsApp</p>
+                    <a href="https://wa.me/27650034437" className="mt-0.5 block font-medium text-brand transition-colors hover:text-brand-hover">Chat on WhatsApp</a>
                   </div>
                 </li>
                 <li className="flex gap-4">
@@ -85,8 +84,8 @@ export default function ContactPage() {
                     </svg>
                   </span>
                   <div>
-                    <p className="text-xs font-medium uppercase tracking-wide text-text-muted">Email</p>
-                    <a href="mailto:info@vesani.co.za" className="mt-0.5 block font-medium text-brand transition-colors hover:text-brand-hover">info@vesani.co.za</a>
+                    <p className="text-xs font-medium uppercase tracking-wide text-text-muted">Facebook</p>
+                    <a href="https://www.facebook.com/julian.hartzenberg" className="mt-0.5 block font-medium text-brand transition-colors hover:text-brand-hover">facebook.com/julian.hartzenberg</a>
                   </div>
                 </li>
               </ul>
@@ -94,12 +93,12 @@ export default function ContactPage() {
           </section>
 
           <p className="text-sm text-text-muted">
-          Vesani Engineering is BEE compliant.{" "}
+          Honest service, clear communication, and long-term care for your vehicle.{" "}
           <Link
-            href="/bee-certificate"
+            href="/about"
             className="font-medium text-brand underline hover:text-brand-hover transition-colors duration-200"
           >
-            View BEE certificate
+            Learn more
           </Link>
           </p>
         </div>
